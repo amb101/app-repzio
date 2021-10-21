@@ -1,0 +1,37 @@
+@import "mixins";
+
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 540px,
+        md: 769px,
+        lg: 1024px,
+        xl: 1270px
+) !default;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+img {
+  width: 100%;
+}

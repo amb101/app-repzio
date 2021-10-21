@@ -1,0 +1,38 @@
+@import "base";
+@import "heading";
+
+section {
+  margin: 0 auto 5rem auto;
+  padding: 0 1rem;
+  max-width: 1200px;
+}
+
+.btn {
+  position: relative;
+  cursor: pointer;
+  border-width: 1px;
+  border-style: solid;
+  padding: 6px 12px;
+  line-height: 1.4;
+  border-radius: 4px;
+  color: #fff;
+  background-color: rgb(204, 0, 0);
+  border-color: rgb(204, 0, 0);
+}
+
+.filter {
+  filter: contrast(70%);
+  transition: filter 0.5s cubic-bezier(.43, .41, .22, .91);
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
+}
