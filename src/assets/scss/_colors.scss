@@ -1,0 +1,51 @@
+/* stylelint-disable color-no-hex  */
+
+// Primary Colors
+$red: #b30000;
+$black: #000000;
+$white: #ffffff;
+
+// Secondary Colors:
+$blue: #1e5a99;
+$blue-medium: #cadaeb;
+$blue-light: #f5f8fc;
+$blue-dark: #194a7e;
+
+// Tertiary Colors:
+$green: #008800;
+$yellow: #d38003;
+$repzio-orange: #ffbe1d;
+$purple: #620050;
+$teal: #09afbb;
+
+// Gray Colors
+$gray: #858c8e;
+$gray-medium: #bec0c3;
+$gray-light: #f3f3f3;
+$gray-dark: #525961;
+$gray-overlay: rgba(#000000, 0.7);
+
+// Base colors
+$primary: $blue;
+$primary-dark: $blue-dark;
+$secondary: $blue;
+$secondary-dark: $blue-dark;
+
+/* stylelint-disable */
+:export {
+  red: $red;
+  black: $black;
+  white: $white;
+
+  // Secondary Colors:
+  blue: $blue;
+  blueLight: $blue-light;
+  blueMedium: $blue-medium;
+  blueDark: $blue-dark;
+
+  // Gray Colors
+  gray: $gray;
+  grayMedium: $gray-medium;
+  grayLight: $gray-light;
+  grayDark: $gray-dark;
+}

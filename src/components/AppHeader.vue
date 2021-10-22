@@ -5,8 +5,9 @@
         <ul>
           <li>
             <img
-              src="https://images.repzio.com/productimages/772/logo772_lg.jpg?width=55&height=47"
+              src="https://images.repzio.com/productimages/772/logo772_lg.jpg?width=250&height=100"
               alt="Company logo"
+              class="logo"
             />
           </li>
           <li>
@@ -26,20 +27,21 @@
 header {
   padding: 1rem;
   margin: 0 auto;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid $gray-overlay;
+  background-color: $white;
 }
 
 nav {
   display: flex;
   justify-content: center;
-  padding: 5px 60px;
+  padding: 0.3125em 3.75em;
 
   @include media-breakpoint-up(md) {
     justify-content: space-evenly;
   }
 
   a {
-    color: #000;
+    color: $black;
     text-decoration: none;
     font-weight: 600;
     font-size: 2rem;
@@ -51,7 +53,8 @@ nav {
 
     &.router-link-exact-active,
     &:hover {
-      color: #ffbe1d;
+      color: $blue;
+      text-decoration: underline;
     }
   }
 
@@ -77,5 +80,10 @@ nav {
       }
     }
   }
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
 }
 </style>

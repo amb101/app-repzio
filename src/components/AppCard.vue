@@ -3,7 +3,7 @@
     <router-link :to="`${cardData.ItemID}`">
       <img :src="`${image}`"
            alt="image"
-           class="card__img filter"
+           class="card__img"
       />
     </router-link>
     <div class="card__content">
@@ -30,7 +30,7 @@
         <div class="card__actions">
           <button :class="`btn ${ctaShow ? 'show w-100' : 'hide'}`"
                   @click="$router.push({ path: '/' })">
-            {{ ctaText || "Add to Cart" }}
+            {{ ctaText || 'Add to Cart' }}
           </button>
         </div>
       </div>
@@ -41,17 +41,17 @@
 <script>
 export default {
   name: 'AppCard',
-  props: {
-    cardData: Object,
-    image: String,
-    description: String,
-    cardTitle: String,
-    cardSubtitleOne: String,
-    cardSubtitleTwo: String,
-    ctaText: String,
-    ctaShow: Boolean,
-    price: Number,
-  },
+  props: [
+    'cardData',
+    'image',
+    'description',
+    'cardTitle',
+    'cardSubtitleOne',
+    'cardSubtitleTwo',
+    'ctaText',
+    'ctaShow',
+    'price',
+  ],
   computed: {
     formattedPrice() {
       return `$${this.cardData.BasePrice.toFixed(2)}`;
@@ -68,13 +68,18 @@ export default {
   max-width: 400px;
   height: 100%;
   border-radius: 4px;
-  background-color: #fff;
-  color: #000;
+  background-color: $blue-light;
+  color: $black;
   margin-right: auto;
   margin-left: auto;
   box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
 
   &__img {
+    filter: contrast(70%);
+    transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+    width: 100%;
+    height: 100%;
+
     &:hover {
       filter: contrast(100%);
     }
@@ -86,8 +91,8 @@ export default {
     font-weight: 600;
 
     &-link {
-      margin-bottom: .5rem;
-      color: #000;
+      margin-bottom: 0.5rem;
+      color: $black;
       text-decoration: none;
 
       &:hover {
@@ -103,7 +108,7 @@ export default {
 
   &__desc {
     line-height: 1.6;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -116,7 +121,7 @@ export default {
     height: 100%;
 
     &-top {
-      padding: .75rem .75rem 0;
+      padding: 0.75rem 0.75rem 0;
     }
 
     &-bottom {
